@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Julee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container h1 {
+  font-family: "Julee", cursive;
+  text-align: center;
+}
+
+.block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.block label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mostrar_dia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mostrar_dia p {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.btn-generator {
+  font-family: "Play", sans-serif;
+  color: #4173f9;
+  width: 10rem;
+  height: 3rem;
+  border: 2px solid #4173f9;
+  background-color: #ffffff;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.btn-generator:hover {
+  background-color: #4173f9;
+  color: #ffffff;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.day-container {
+  border: 1px solid #ff0000;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dia-seleccionado {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dia-seleccionado h2 {
+  color: #ffffff;
+}/*# sourceMappingURL=syle.css.map */
