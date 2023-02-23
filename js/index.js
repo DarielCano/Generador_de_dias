@@ -1,13 +1,14 @@
 const d = document;
 
 let $btnGenerar = d.querySelector(".btn-generator");
+let $btnEliminar = d.querySelector(".btn-delete");
+let $btnReiniciar = d.querySelector(".btn-delete-all");
 let $verDia = d.querySelector(".dia");
 let $mostrarDia = d.querySelector(".day-container");
 
 let dias = [];
 let dia = 0;
 dias = renderDia();
-console.log(console.log(new Date()));
 
 $btnGenerar.addEventListener("click", (e) => {
   dia = Math.floor(Math.random() * 365);
@@ -22,6 +23,21 @@ $btnGenerar.addEventListener("click", (e) => {
   }
 });
 
+$btnEliminar.addEventListener("click", () => {
+  if (dias.length > 0) {
+    dias.pop();
+    localStorage.setItem("dias", JSON.stringify(dias));
+    renderDia();
+  }
+});
+
+$btnReiniciar.addEventListener("click", () => {
+  if (dias.length > 0) {
+    dias.length = 0;
+    localStorage.setItem("dias", JSON.stringify(dias));
+    renderDia();
+  }
+});
 function renderDia() {
   let string = ``;
   let diasGenerados = !localStorage.getItem("dias")

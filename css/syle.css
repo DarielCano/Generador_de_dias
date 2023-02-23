@@ -30,10 +30,10 @@
   margin-left: 1rem;
 }
 
-.btn-generator {
+.btn {
   font-family: "Play", sans-serif;
   color: #4173f9;
-  width: 10rem;
+  width: 8rem;
   height: 3rem;
   border: 2px solid #4173f9;
   background-color: #ffffff;
@@ -42,7 +42,7 @@
   font-weight: bold;
   margin-bottom: 1rem;
 }
-.btn-generator:hover {
+.btn:hover {
   background-color: #4173f9;
   color: #ffffff;
   transition: all 1s ease;
@@ -50,7 +50,6 @@
 }
 
 .day-container {
-  border: 1px solid #ff0000;
   padding: 1rem 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -58,8 +57,10 @@
 }
 
 .dia-seleccionado {
-  width: 8rem;
-  height: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -68,4 +69,12 @@
 }
 .dia-seleccionado h2 {
   color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+  .block {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=syle.css.map */

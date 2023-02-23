@@ -28,10 +28,10 @@
   }
 }
 
-.btn-generator {
+.btn {
   font-family: $font-btn;
   color: map-get($colors, second-color);
-  width: 10rem;
+  width: 8rem;
   height: 3rem;
   border: 2px solid map-get($colors, second-color);
   background-color: map-get($colors, white-color);
@@ -39,6 +39,7 @@
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 1rem;
+
   &:hover {
     background-color: map-get($colors, second-color);
     color: map-get($colors, white-color);
@@ -47,7 +48,6 @@
   }
 }
 .day-container {
-  border: 1px solid map-get($colors, red-color);
   padding: 1rem 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -55,8 +55,10 @@
 }
 
 .dia-seleccionado {
-  width: 8rem;
-  height: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   background-color: map-get($colors, dark-color-menu);
   display: flex;
