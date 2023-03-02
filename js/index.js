@@ -10,7 +10,9 @@ let $dineroAhorrado = d.querySelector(".totalDinero");
 
 let dias = [];
 let dia = 0;
-$dineroTotal.textContent = localStorage.getItem("total");
+$dineroTotal.textContent = !localStorage.getItem("total")
+  ? ""
+  : localStorage.getItem("total");
 dias = renderDia();
 
 $btnGenerar.addEventListener("click", (e) => {
