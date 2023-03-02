@@ -1,7 +1,17 @@
-@media screen and (max-width: 600px) {
-  .block {
+@media screen and (max-width: 800px) {
+  /*  .block {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+
+  .block__btn {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .block_info {
+    flex-direction: column;
+    align-items: center;
   }
 }

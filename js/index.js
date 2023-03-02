@@ -5,9 +5,12 @@ let $btnEliminar = d.querySelector(".btn-delete");
 let $btnReiniciar = d.querySelector(".btn-delete-all");
 let $verDia = d.querySelector(".dia");
 let $mostrarDia = d.querySelector(".day-container");
+let $dineroTotal = d.querySelector(".totalDias");
+let $dineroAhorrado = d.querySelector(".totalDinero");
 
 let dias = [];
 let dia = 0;
+$dineroTotal.textContent = localStorage.getItem("total");
 dias = renderDia();
 
 $btnGenerar.addEventListener("click", (e) => {
@@ -52,5 +55,22 @@ function renderDia() {
   $mostrarDia.innerHTML = string;
   $verDia.textContent = diasGenerados[diasGenerados.length - 1];
 
+  const initialValue = 0;
+  const sumWithInitial = diasGenerados.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+  $dineroAhorrado.textContent = sumWithInitial;
+
   return diasGenerados;
 }
+
+/* total de dinero recolectado */
+function total() {
+  let total = 0;
+  for (let i = 1; i <= 365; i++) {
+    total += i;
+  }
+  localStorage.setItem("total", total);
+}
+total();
